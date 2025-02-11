@@ -27,7 +27,10 @@ kotlin {
             implementation(libs.coil.compose)
             implementation(libs.coil.network.ktor)
             implementation(libs.core.splashscreen)
+            implementation(libs.accompanist.pager)
+            implementation(libs.coil.gif)
         }
+
         commonMain.dependencies {
             implementation(compose.runtime)
             implementation(compose.foundation)
@@ -37,6 +40,8 @@ kotlin {
             implementation(compose.components.uiToolingPreview)
             implementation(projects.shared)
             implementation(libs.kotlinx.serialization.core)
+            implementation(compose.materialIconsExtended)
+            implementation(libs.androidx.navigation.compose)
         }
     }
 }
@@ -65,6 +70,9 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
+    }
+    buildFeatures {
+        compose = true
     }
 }
 
